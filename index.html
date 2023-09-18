@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Stone Paper Scissor</title>
+</head>
+<body>
+<div class="scorecard hidden" id="scorecard">
+    <div class="score">
+    <div>
+        <div class="text">ROCK</div>
+        <div class="text">PAPER</div>
+        <div class="text">SCISSOR</div>
+    </div>
+       <div class="display">
+        <div class="totalScore">
+         <span>COMPUTER</span><br>
+         <span>SCORE</span><br>
+         <input type="text" value="0" name="" id="compScore" disabled>
+        </div>
+        <div class="totalScore">
+            <span>YOUR</span><br>
+            <span>SCORE</span><br>
+            <input type="text" value="0" name="" id="userScore" disabled>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="main">
+   <div class="playArea hidden" id="playArea">
+   <div class="lines">
+           <div class="line1">
+              
+           </div>
+           <div class="line2">
+               
+           </div>
+           <div class="line3">
+             
+           </div>
+           </div>
+   <div class="choices">
+      
+       <div class="choice1" id="stone">
+        <img class="option" src="stone.svg" alt="stone">
+        
+       </div>
+       
+       <div class="choice2" id="paper">
+        <img class="option" src="paper.svg" alt="paper">
+       </div>
+       <div class="choice3" id="scissor">
+        <img class="option" src="scissor.svg" alt="scissor">
+       </div>
+   </div>
+   </div>
+
+   <div class="summary hidden" id="summary">
+ 
+   <div class="userChoice hidden" id="userChoice">
+    <div class="container">
+        <div class="hidden layer layerA" id="layer1">
+            <div class="layer layerB">
+                <div class="layer layerC">
+           
+                   
+                </div>
+            </div>
+           </div>
+    </div>
+
+   
+       <div class="hidden" id="userStone">
+        <img class="option after-win" id="stoneUser" src="stone.svg" alt="stone">
+       </div>
+     
+       
+     
+       <div class="hidden" id="userPaper">
+        <img class="option after-win" id="paperUser" src="paper.svg" alt="paper">
+       </div>
+
+       <div class="hidden" id="userScissor">
+        <img class="option after-win" id="scissorUser" src="scissor.svg" alt="scissor">
+       </div>
+ </div>
+
+ 
+
+ <div class="result hidden" id="result">
+  <div class="hidden" id="won"><h3>YOU WON</h3><h4>AGAINST PC</h4></div>
+  <div class="hidden" id="lost"><h3>YOU LOST</h3><h4>AGAINST PC</h4></div>
+  <div class="hidden" id="tie"><h3>TIE UP</h3></div>
+  <button class="playAgain hidden" id="playAgain" onclick="refresh()"><h3>PLAY AGAIN</h3></button>
+  <button class="replay hidden" id="replay" onclick="refresh()"><h3>REPLAY</h3></button>
+   </div>
+
+ 
+   <div class="compChoice hidden" id="compChoice">
+    <div class="container">
+        <div class="hidden layer layerD" id="layer2">
+            <div class="layer layerE">
+                <div class="layer layerF">
+           
+                   
+                </div>
+            </div>
+           </div>
+    </div>
+
+       <div class="hidden" id="compStone">
+        <img class="option after-win" id="stoneComp" src="stone.svg" alt="stone">
+       </div>
+
+       <div class="hidden" id="compPaper">
+        <img class="option after-win" id="paperComp" src="paper.svg" alt="paper">
+       </div>
+
+       <div class="hidden" id="compScissor">
+        <img class="option after-win" id="scissorComp" src="scissor.svg" alt="scissor">
+       </div>
+   </div>
+   </div>
+   </div>
+   <div class="picked">
+    <div class="youPicked hidden" id="youPicked">
+        <h2>YOU PICKED</h2>
+       </div>
+       <div class="pcPicked hidden" id="pcPicked">
+        <h2>PC PICKED</h2>
+       </div>
+   </div>
+  
+  
+   <div class=" award hidden" id="award">
+        <img class="stars" src="star.png" alt="stars">
+        <img class="trophy" src="trophy.png" alt="trophy">
+        <div class="appreciate">
+            <h1>HURRAY !!</h1>
+            <h2>YOU WON THE GAME</h2>
+            <button class="playAgain" id="playAgain" onclick="refresh()"><h3>PLAY AGAIN</h3></button>
+        </div>
+   </div>
+   
+    <button class="next hidden"  id="next"><h3>NEXT</h3</button>
+    <button class="ruleButton" id="ruleButton"><h3>RULES</h3></button>
+
+    <div class="rules hidden" id="rule">
+        <h1 class="heading3">GAME RULES</h1>
+        <ul>
+           <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li><br>
+           <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li><br>
+           <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li><br>
+           <li>If both players lay down the same hand, each player lays down another hand</li><br>
+        </ul>
+        <div class="close" id="close">
+          <img class="x" src="X.svg" alt="close">
+        </div>
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>
